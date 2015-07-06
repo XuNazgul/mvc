@@ -1,0 +1,19 @@
+create database mvc;
+use mvc;
+create table admin(
+	id int not null,
+	name char(64),
+	password char(32) not null
+);
+
+insert into admin values(100,'root','123');
+
+create table emp(
+	id int not null primary key auto_increment,
+	name char(64) not null,
+	email char(32)  not null,
+	grade tinyint not null,
+	salary int not null
+);
+insert into emp (name,email,grade,salary) values('nazgul','guobing@163.com',1,20000);
+
