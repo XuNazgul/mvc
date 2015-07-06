@@ -17,6 +17,11 @@ class empSqlCode extends sqlBase {
 		return $data [0] ['count(*)'];
 	}
 	
+	public function getEmpList( $start, $limit ){
+		$sql = "select * from emp order by id limit $start, $limit;";
+		$data = $this->exec_dql2 ( $sql );
+		return $data;
+	}
 }
 
 ?>
