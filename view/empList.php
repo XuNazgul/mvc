@@ -13,6 +13,8 @@
 			<th>email</th>
 			<th>grade</th>
 			<th>enable</th>
+			<th>修改用户</th>
+			<th>删除用户</th>
 		</tr>
 		<?php
 		require_once (dirname ( __FILE__ ) . '/' . '../service/empService.php');
@@ -31,6 +33,8 @@
 			echo "<td>".$value->getEmail()."</td>";
 			echo "<td>".$value->getGrade()."</td>";
 			echo "<td>".$value->getSalary()."</td>";
+			echo "<td><a href='../control/empControl.php?flag=chang&id=".$value->getId()."'>修改用户</a></td>";
+			echo "<td>删除用户</td>";
 			echo "</tr>";
 		}
 		?>

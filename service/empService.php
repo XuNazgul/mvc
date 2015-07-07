@@ -33,5 +33,9 @@ class empService{
 	public function getEmpPage($pageSize){
 		return ceil($this->empSqlCode->getEmpCount()/$pageSize);
 	}
+	
+	public function getEmpInfo($emp){
+		
+	}
 }
 ?>

@@ -17,3 +17,5 @@ create table emp(
 );
 insert into emp (name,email,grade,salary) values('nazgul','guobing@163.com',1,20000);
 
+//复制表格中的内容，用于测试
+insert into emp (name,email,grade,salary) select name,email,grade,salary from emp;
