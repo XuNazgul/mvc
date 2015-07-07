@@ -35,7 +35,11 @@ class empService{
 	}
 	
 	public function getEmpInfo($emp){
-		
+		$value = $this->empSqlCode->getEmpInfo($emp->getId());
+		$emp->setName($value['name']);
+		$emp->setEmail($value['email']);
+		$emp->setGrade($value['grade']);
+		$emp->setSalary($value['salary']);
 	}
 }
 ?>

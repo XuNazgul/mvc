@@ -22,6 +22,12 @@ class empSqlCode extends sqlBase {
 		$data = $this->exec_dql2 ( $sql );
 		return $data;
 	}
+	
+	public function getEmpInfo($id){
+		$sql = "select * from emp where id=$id;";
+		$data = $this->exec_dql2 ( $sql );
+		return $data [0];
+	}
 }
 
 ?>

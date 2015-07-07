@@ -33,7 +33,7 @@
 			echo "<td>".$value->getEmail()."</td>";
 			echo "<td>".$value->getGrade()."</td>";
 			echo "<td>".$value->getSalary()."</td>";
-			echo "<td><a href='../control/empControl.php?flag=chang&id=".$value->getId()."'>修改用户</a></td>";
+			echo "<td><a href='../control/empControl.php?flag=change&id=".$value->getId()."'>修改用户</a></td>";
 			echo "<td>删除用户</td>";
 			echo "</tr>";
 		}
