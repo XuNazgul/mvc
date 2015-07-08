@@ -41,5 +41,18 @@ class empService{
 		$emp->setGrade($value['grade']);
 		$emp->setSalary($value['salary']);
 	}
+	
+	public function updateEmp($emp){
+		
+		return true;
+	}
+	public function addEmp($emp){
+	
+		return true;
+	}
+	public function delEmp($emp){
+		
+		return true;
+	}
 }
 ?>

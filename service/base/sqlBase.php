@@ -2,7 +2,7 @@
 class sqlBase {
 	private $link;
 	public function __construct() {
-		$this->link = mysql_connect ( "localhost", "root", "123" ) or die ( 'could not connect' . mysql_error () );
+		$this->link = mysql_connect ( "localhost", "root", "123456" ) or die ( 'could not connect' . mysql_error () );
 		mysql_set_charset ( "utf8" );
 		mysql_select_db ( "mvc", $this->link ) or die ( 'select db' . mysql_error () );
 	}

@@ -26,15 +26,36 @@
 	$interfaces[$flag]($emp);
 	//修改用户和新建保存用户是一个意思，只不过新建没有初始数据而已
 	function changeEmp($emp){
-		header ( "location:../view/empSave.php?id=".$emp->getId() );
+		header ( "location:../view/empInfo.php?flag=change&id=".$emp->getId() );
 		exit ();
 	}
 	function deleteEmp($emp){
+		$empService = new empService();
+		$ret = $empService->delEmp($emp);
+		if($ret){
+			header ( "location:../view/empManage.php");
+			exit ();
+		}else{
+			echo "empControl deleteEmp error";
+		}
 	}
 	function addEmp($emp){
 	}
 	function saveEmp($emp){
-		echo "saveEmp";
+		$ret = false;
+		$empService = new empService();
+		if($emp->getId()==-1){//add
+			$ret = $empService->addEmp($emp);
+		}else{//update
+			$ret = $empService->updateEmp($emp);
+		}
+		if($ret){
+			header ( "location:../view/empInfo.php?flag=show&id=".$emp->getId() );
+			exit ();
+		}else{
+			echo "empControl saveEmp error";
+		}
+		
 	}
 	
 ?>

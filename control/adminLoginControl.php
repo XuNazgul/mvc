@@ -26,5 +26,5 @@
 		exit ();
 	}
 	// 都正确则跳转网页
-	header ( "location:../view/empList.php" );
+	header ( "location:../view/empManage.php" );
 ?>
